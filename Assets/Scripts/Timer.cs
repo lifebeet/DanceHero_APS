@@ -34,7 +34,7 @@ private void Awake()
         while (remainingTime > 0)
         {
             timerText.text = remainingTime.ToString("F0");
-            textAnimator.Play(timerAnimationName);
+            textAnimator.Play(timerAnimationName, 0, 0f);
             onSecondPassed.Invoke();
             yield return new WaitForSeconds(1f);
             remainingTime--;                      
