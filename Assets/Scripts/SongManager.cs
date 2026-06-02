@@ -11,6 +11,7 @@ private UnityEvent onSongStart;
 private UnityEvent onSongSelected;
 [SerializeField]
 private UnityEvent onSongEnd;
+private NotesManager notesManager;
 private SoundData currentSongData;
 public void PlaySong(SoundData songData)
     {
@@ -27,7 +28,7 @@ public void PlaySong(SoundData songData)
     {
         characterAnimator.Play(currentSongData.animationName);
         SoundManager.instance.PlayMusic(currentSongData.songName);
-        NotesManager.StartNoteChart(currentSongData.noteChart, currentSongData.speed);
+        notesManager.StartNoteChart(currentSongData.noteChart, currentSongData.speed);
         onSongStart?.Invoke();
     }
 }
