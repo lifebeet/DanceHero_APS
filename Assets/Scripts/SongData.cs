@@ -5,4 +5,5 @@ public class SongData : MonoBehaviour
 public string animationName;
 public string songName;
 public TextAsset noteChart;
+public float speed;
 }

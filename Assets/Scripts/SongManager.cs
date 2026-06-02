@@ -27,6 +27,7 @@ public void PlaySong(SoundData songData)
     {
         characterAnimator.Play(currentSongData.animationName);
         SoundManager.instance.PlayMusic(currentSongData.songName);
+        NotesManager.StartNoteChart(currentSongData.noteChart, currentSongData.speed);
         onSongStart?.Invoke();
     }
 }

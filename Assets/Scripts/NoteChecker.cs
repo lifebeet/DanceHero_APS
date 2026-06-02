@@ -1,4 +1,4 @@
-using UnityEngine;
+    using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.Events;
 
@@ -36,7 +36,7 @@ private void Awake()
     }
     public void Check()
 {
-    animator.Play(animationName);
+    animator.Play(animationName, 0, 0f);
     if(activeNotes.Count > 0)
     {
         onNoteChecked.Invoke();
