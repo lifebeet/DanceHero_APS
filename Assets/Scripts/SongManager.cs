@@ -45,4 +45,14 @@ public void PlaySong(SoundData songData)
         yield return new WaitForSeconds(characterAnimator.GetCurrentAnimatorStateInfo(0).length);
         characterAnimator.Play(currentSongData.animationName, 0, 0f);
     }
+    public void WinSong()
+    {
+        StopAllCoroutines();
+        characterAnimator.Play("Win", 0, 0f);
+    }
+    public void LoseSong()
+    {
+        StopAllCoroutines();
+        characterAnimator.Play("Lose", 0, 0f);
+    }
 }
